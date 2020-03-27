@@ -50,7 +50,7 @@ pub trait BlockWrite {
     /// Fill count with val
     fn write_byte(&mut self, val: u8, count: usize);
     /// Index words inside the block
-    fn slice(&self) -> &'static [u32];
+    fn slice(&self) -> &[u32];
     /// Commit block to queues
     fn commit(&mut self);
 }
